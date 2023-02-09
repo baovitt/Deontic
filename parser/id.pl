@@ -7,6 +7,6 @@ id_chars --> [].
 id_chars --> id_char, id_chars.
 
 ids --> id.
-ids --> id, ws, ids.
+ids --> id, ws0, `,`, ws0, ids.
 
 id(Id) :- phrase(id, Id).
