@@ -1,0 +1,18 @@
+package baovitt::deontic::examples end
+
+with { list } from deontic::std end
+
+error length
+	negativeLengthError
+	lengthContradictionError
+end
+
+type length int -> list T -> error(length) end
+
+length 0 [] --> true end
+length Len [_|Tail] --> length (Len - 1) Tail end
+
+length -1 _ --> negativeLengthError end
+length Len [] --> 
+    lengthContradictionError,
+    { Len > 0 } end

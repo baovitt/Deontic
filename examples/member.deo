@@ -1,0 +1,8 @@
+package baovitt::deontic::examples end
+
+with { list } from deontic::std end
+
+type member T -> list T -> error(member) end
+
+member Head [Head|_] --> true end
+member Head [_|Tail] --> member Head Tail end

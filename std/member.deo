@@ -1,0 +1,8 @@
+package deontic::std end
+
+with { list } from deontic::std end
+
+type member T -> list T -> bool end
+
+member Head [Head|_] --> true end
+member Head [_|Tail] --> member Head Tail end
