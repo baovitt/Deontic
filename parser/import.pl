@@ -9,4 +9,4 @@ import --> id.
 import --> `_`.
 import --> `{`, ws0, sub_imports, ws0, `}`.
 
-import_expression --> `with`, ws, import, ws, `from`, ws, package.
+import_expression --> `with`, ws, import, ws, `from`, ws, package, ws, `end`.

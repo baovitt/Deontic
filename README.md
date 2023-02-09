@@ -20,13 +20,13 @@ package organization::project::subdirectory::another end
 Import declarations are for importing all of, or parts of, packages.
 ```Deontic
 // Wildcard import
-with _ from organization::project::subdirectory::another
+with _ from organization::project::subdirectory::another end
 
 // specific import
 with {
 	component 
 	another::sub
-} from organization::project::subdirectory
+} from organization::project::subdirectory end
 ```
 
 ### Kinds Declarations:
@@ -39,6 +39,15 @@ kind pair type -> type -> type end
 /// list kind with multiple names
 kind list, vector, array type -> type end
 ```
+### Type Declarations:
+Now that we have kind declarations, we can define some cool types with the primitives.
+```Deontic
+## Membership type. With hereditary formulas, we can make poweful dependent types, such as list must be of length n.
+type member T -> list T end
+type length int -> list T end
+```
+We'll get back to these!
+
 More to come soon!
 
 # Implementation:
