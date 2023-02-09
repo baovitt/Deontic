@@ -1,0 +1,10 @@
+:- [comments].
+:- [errors].
+:- [fixity].
+:- [id].
+:- [import].
+:- [kinds].
+:- [package].
+:- [primitives].
+:- [type].
+:- [ws].

@@ -2,11 +2,8 @@
 :- [ws].
 :- [package].
 
-sub_imports --> package, ws0, `:`, ws0, sub_imports.
-sub_imports --> package.
-
 import --> id.
 import --> `_`.
-import --> `{`, ws0, sub_imports, ws0, `}`.
+import --> `{`, ws0, packages, ws0, `}`.
 
-import_expression --> `with`, ws, import, ws, `from`, ws, package, ws, `end`.
+import_expression --> `with`, ws, import, ws, `from`, ws, packages, ws, `end`.
