@@ -46,6 +46,17 @@ Now that we have kind declarations, we can define some cool types with the primi
 type member T -> list T end
 type length int -> list T end
 ```
+
+### Custom Type Errors:
+What happens if we have a dependent type then pass a value that doesn't fit. By default, we get false, but we can add custom error types to convey more information:
+```Deontic
+type length int -> list T end
+error length
+	negativeLengthError
+	lengthContradictionError
+end
+```
+
 We'll get back to these!
 
 More to come soon!
