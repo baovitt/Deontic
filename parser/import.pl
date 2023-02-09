@@ -2,7 +2,7 @@
 :- [ws].
 :- [package].
 
-sub_imports --> package, ws, sub_imports.
+sub_imports --> package, ws0, `:`, ws0, sub_imports.
 sub_imports --> package.
 
 import --> id.
