@@ -10,6 +10,25 @@ Deontic is a programming language I'm working on. For now, I'm only going to sha
 ```
 Multiline comments don't exist.
 
+### Package Declarations:
+Package declarations are the first thing in a file and usually represent their place in the directory structure. They look like this:
+```Deontic
+package organization::project::subdirectory::another end
+```
+
+### Import Declarations:
+Import declarations are for importing all of, or parts of, packages.
+```Deontic
+// Wildcard import
+with _ from organization::project::subdirectory::another
+
+// specific import
+with {
+	component 
+	another::sub
+} from organization::project::subdirectory
+```
+
 ### Kinds Declarations:
 
 Kinds are like types of types. We can declare them like this:
